@@ -1,19 +1,19 @@
 [Project]
-FileName=PrjRecursividad_1.dev
-Name=PrjRecursividad_1
+FileName=PrjRandomico.dev
+Name=PrjRandomico
 Type=1
 Ver=2
 ObjFiles=
 Includes=
 Libs=
-PrivateResource=PrjRecursividad_1_private.rc
+PrivateResource=
 ResourceIncludes=
 MakeIncludes=
 Compiler=
 CppCompiler=
 Linker=
 IsCpp=1
-Icon=PrjRecursividad_1.ico
+Icon=PrjRandomico.ico
 ExeOutput=
 ObjectOutput=
 LogOutput=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=EjemploRecursividad.cpp
+FileName=main.cpp
 CompileCpp=1
 Folder=
 Compile=1
