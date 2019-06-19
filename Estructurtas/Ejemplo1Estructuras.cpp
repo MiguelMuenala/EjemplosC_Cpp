@@ -4,14 +4,16 @@
 using namespace std;
 
 
-struct Cliente{
+
+
+int main(){
+	struct Cliente{
 	char nombre[20];
 	int nomUnidades;
 	float precio;
 	char estado;
 };
-
-int main(){
 	
+	system("PAUSE");
 	return 0;
 }

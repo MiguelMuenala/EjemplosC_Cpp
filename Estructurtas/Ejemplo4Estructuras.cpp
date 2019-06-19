@@ -16,7 +16,6 @@ int main(){
 	Cliente cliente3, cliente4;
 	Cliente listado[100];
 	cliente4=cliente3=cliente2=cliente1;
-	Cliente listado[100];
 	
 	cout <<"sizeof(char)= " << sizeof(char) <<endl;
 	cout <<"sizeof(int)= " << sizeof(int) <<endl;
