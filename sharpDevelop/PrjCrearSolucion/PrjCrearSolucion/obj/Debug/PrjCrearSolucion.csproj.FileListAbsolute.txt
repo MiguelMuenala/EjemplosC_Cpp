@@ -1,0 +1,8 @@
+C:\TEMP\EjemplosC_Cpp\sharpDevelop\PrjCrearSolucion\PrjCrearSolucion\bin\Debug\PrjCrearSolucion.exe.config
+C:\TEMP\EjemplosC_Cpp\sharpDevelop\PrjCrearSolucion\PrjCrearSolucion\bin\Debug\PrjCrearSolucion.exe
+C:\TEMP\EjemplosC_Cpp\sharpDevelop\PrjCrearSolucion\PrjCrearSolucion\bin\Debug\PrjCrearSolucion.pdb
+C:\TEMP\EjemplosC_Cpp\sharpDevelop\PrjCrearSolucion\PrjCrearSolucion\obj\Debug\PrjCrearSolucion.csprojResolveAssemblyReference.cache
+C:\TEMP\EjemplosC_Cpp\sharpDevelop\PrjCrearSolucion\PrjCrearSolucion\obj\Debug\PrjCrearSolucion.MainForm.resources
+C:\TEMP\EjemplosC_Cpp\sharpDevelop\PrjCrearSolucion\PrjCrearSolucion\obj\Debug\PrjCrearSolucion.csproj.GenerateResource.Cache
+C:\TEMP\EjemplosC_Cpp\sharpDevelop\PrjCrearSolucion\PrjCrearSolucion\obj\Debug\PrjCrearSolucion.exe
+C:\TEMP\EjemplosC_Cpp\sharpDevelop\PrjCrearSolucion\PrjCrearSolucion\obj\Debug\PrjCrearSolucion.pdb
