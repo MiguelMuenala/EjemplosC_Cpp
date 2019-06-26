@@ -26,7 +26,7 @@ Cliente ProcCliente(Cliente cliente){
 
 int main(){ 
 	Cliente cliente1;
-	Cliente respuestaCliente=ProcCliente(cliente);
+	Cliente respuestaCliente=ProcCliente(cliente1);
 	cout <<"Los datos del cliente son: "<<endl;
 	cout << "Cliente: "<< respuestaCliente.nombre<<", unidad="<<respuestaCliente.unidades<<", precio="<<respuestaCliente.precio<<", estado="<<respuestaCliente.estado <<endl; 
     
