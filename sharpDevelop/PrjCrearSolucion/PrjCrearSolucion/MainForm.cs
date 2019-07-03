@@ -148,7 +148,7 @@ namespace PrjCrearSolucion
 			try
 			{
 				string path = txbCrearArchivo.Text;
-				StreamWriter escritura = File.CreateText();
+				StreamWriter escritura = File.CreateText(@path);
 				
 				escritura.WriteLine("Hola Archivo");
 				escritura.WriteLine("Segunda linea");
@@ -156,8 +156,16 @@ namespace PrjCrearSolucion
 				
 				// Siempre cerrar el archivo despues de usarlo.
 				escritura.Close();
+				/*
+				using(StreamWriter escrituraDos = File.CreateText(@path));
+				{
+					escrituraDos.WriteLine("Hola Archivo");
+				    escrituraDos.WriteLine("Segunda linea");
+				    escrituraDos.WriteLine("Tercera linea");
+				} */
 				
-				EscribirLog("info","Escritura de Archivos: se escribio de archivo",dgvLogs);
+				
+				EscribirLog("info","Escritura de Archivos: se escribio el archivo",dgvLogs);
 				
 			}
 			catch(Exception error)
@@ -171,7 +179,7 @@ namespace PrjCrearSolucion
 		{
 			try
 			{
-				string patch =txbCrearDirectorio.Text;
+				string path =txbCrearDirectorio.Text;
 				Directory.CreateDirectory(@path);
 				
 				EscribirLog("info", "Crear Directorios: Se creo el directorio" + path, dgvLogs);
@@ -180,6 +188,37 @@ namespace PrjCrearSolucion
 				EscribirLog("error", error.ToString(), dgvLogs);
 			}
 		}
+		void BtnCopiarDirectorioClick(object sender, EventArgs e)
+		{
+			try{
+				string pathInicio = txbIniciaCopia.Text;
+				string pathFin = txbFinalizaCopia.Text;
+				
+				char[] cadenaInicio =pathInicio.ToCharArray();
+				
+				bool existeDirectorioInicio = Directory.Exists(@pathInicio);
+				
+				if(existeDirectorioInicio == true)
+				{
+					string[] directoriosInicio = Directory.GetDirectories(@pathInicio);
+					
+					foreach(string directorio in directoriosInicio)
+					{
+						EscribirLog("info", directorio,dgvLogs);
+						
+						char m =cadenaInicio[1];
+						
+						
+					}
+				}
+				
+			}
+			catch(Exception error)
+			{ //ERROR
+				
+			}
+		}
+		
 		
 	}
 }
