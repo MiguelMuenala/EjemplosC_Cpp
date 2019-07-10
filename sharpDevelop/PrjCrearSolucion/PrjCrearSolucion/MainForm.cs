@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
+using System.Text;
 
 
 namespace PrjCrearSolucion
@@ -150,10 +151,15 @@ namespace PrjCrearSolucion
 				string path = txbCrearArchivo.Text;
 				StreamWriter escritura = File.CreateText(@path);
 				
+				FileStream lectura = File.OpenRead(@path);
+				
+				StreamReader lecturaArchivo = File.OpenText(@path);
+				
 				escritura.WriteLine("Hola Archivo");
 				escritura.WriteLine("Segunda linea");
 				escritura.WriteLine("Tercera linea");
 				
+				lecturaArchivo.ReadLine();
 				// Siempre cerrar el archivo despues de usarlo.
 				escritura.Close();
 				/*
@@ -201,13 +207,16 @@ namespace PrjCrearSolucion
 				if(existeDirectorioInicio == true)
 				{
 					string[] directoriosInicio = Directory.GetDirectories(@pathInicio);
+					// Copiar los archivos
+					
+					string[] archivosEncontrados = Directory.GetFiles(@pathInicio);
 					
 					foreach(string directorio in directoriosInicio)
 					{
 						EscribirLog("info", directorio,dgvLogs);
 						
-						char m =cadenaInicio[1];
-						
+						int inicioSubstrings =  pathInicio.Length;
+						int finSubstrings = directorio.Length;
 						
 					}
 				}
@@ -217,6 +226,74 @@ namespace PrjCrearSolucion
 			{ //ERROR
 				
 			}
+		}
+		void MainFormLoad(object sender, EventArgs e)
+		{
+	
+		}
+		void BtnStreamWClick(object sender, EventArgs e)
+		{
+		    string path = txbStreamW.Text;
+			Stream writingStream = new FileStream(@path,FileMode.Create);
+			    
+			try{
+				
+			    
+			    if(writingStream.CanWrite){
+			    	byte[] miNombreEnBytes = new byte[]{
+			    		77, 73, 71, 85, 69, 76,
+			    	};
+					
+					writingStream.Write(miNombreEnBytes,0,miNombreEnBytes.Length);
+					
+			    	writingStream.WriteByte(33);
+			    	
+			    	EscribirLog("info"," FALTA",dgvLogs);
+			    	
+			    }else{
+			    	
+			    	EscribirLog("error","No se puede escribir",dgvLogs);
+			    }
+			    writingStream.Close();
+			    
+			    
+			    
+			    
+				
+			}catch(Exception error){
+				
+				EscribirLog("error","No te dejo caer",dgvLogs);
+				
+			}
+			finally{
+				writingStream.Close();
+			}
+		}
+		void BtnStreamRClick(object sender, EventArgs e)
+		{
+			string path = txbStreamW.Text;
+			
+			try {
+				using(Stream readingStream = new FileStream(@path, FileMode.Open)){
+				  byte[] arregloTemporal = new byte[10];
+				  
+				  UTF8Encoding codificacion = new UTF8Encoding(true);
+				  
+				  int posicion = 0;
+				  
+				  while(  (posicion = readingStream.Read(arregloTemporal, 0, arregloTemporal.Length))<0   ){
+				  	
+				  	String caracter = codificacion.GetString(arregloTemporal, 0, arregloTemporal.Length);
+				  	
+				  	EscribirLog("info","Caracter: " + caracter ,dgvLogs);
+				  };
+			
+			    }
+			}catch(Exception error){
+				
+				EscribirLog("error", error.ToString(),dgvLogs);
+			}
+			
 		}
 		
 		

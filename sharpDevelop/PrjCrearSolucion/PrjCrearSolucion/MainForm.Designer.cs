@@ -31,6 +31,9 @@ namespace PrjCrearSolucion
 		private System.Windows.Forms.Button btnCopiarDirectorio;
 		private System.Windows.Forms.TextBox txbIniciaCopia;
 		private System.Windows.Forms.TextBox txbFinalizaCopia;
+		private System.Windows.Forms.Button btnStreamW;
+		private System.Windows.Forms.TextBox txbStreamW;
+		private System.Windows.Forms.Button btnStreamR;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -67,6 +70,9 @@ namespace PrjCrearSolucion
 			this.btnCopiarDirectorio = new System.Windows.Forms.Button();
 			this.txbIniciaCopia = new System.Windows.Forms.TextBox();
 			this.txbFinalizaCopia = new System.Windows.Forms.TextBox();
+			this.btnStreamW = new System.Windows.Forms.Button();
+			this.txbStreamW = new System.Windows.Forms.TextBox();
+			this.btnStreamR = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -80,7 +86,7 @@ namespace PrjCrearSolucion
 			this.Log});
 			this.dgvLogs.Location = new System.Drawing.Point(54, 123);
 			this.dgvLogs.Name = "dgvLogs";
-			this.dgvLogs.Size = new System.Drawing.Size(709, 126);
+			this.dgvLogs.Size = new System.Drawing.Size(739, 126);
 			this.dgvLogs.TabIndex = 0;
 			this.dgvLogs.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLogsCellDoubleClick);
 			// 
@@ -125,7 +131,7 @@ namespace PrjCrearSolucion
 			// 
 			// btnListarDitectorio
 			// 
-			this.btnListarDitectorio.Location = new System.Drawing.Point(198, 80);
+			this.btnListarDitectorio.Location = new System.Drawing.Point(155, 80);
 			this.btnListarDitectorio.Name = "btnListarDitectorio";
 			this.btnListarDitectorio.Size = new System.Drawing.Size(100, 23);
 			this.btnListarDitectorio.TabIndex = 5;
@@ -135,14 +141,14 @@ namespace PrjCrearSolucion
 			// 
 			// txbListarDitectorio
 			// 
-			this.txbListarDitectorio.Location = new System.Drawing.Point(198, 37);
+			this.txbListarDitectorio.Location = new System.Drawing.Point(155, 37);
 			this.txbListarDitectorio.Name = "txbListarDitectorio";
 			this.txbListarDitectorio.Size = new System.Drawing.Size(100, 20);
 			this.txbListarDitectorio.TabIndex = 11;
 			// 
 			// btnCrearDirectorio
 			// 
-			this.btnCrearDirectorio.Location = new System.Drawing.Point(498, 80);
+			this.btnCrearDirectorio.Location = new System.Drawing.Point(367, 80);
 			this.btnCrearDirectorio.Name = "btnCrearDirectorio";
 			this.btnCrearDirectorio.Size = new System.Drawing.Size(100, 23);
 			this.btnCrearDirectorio.TabIndex = 7;
@@ -151,14 +157,14 @@ namespace PrjCrearSolucion
 			// 
 			// txbCrearDirectorio
 			// 
-			this.txbCrearDirectorio.Location = new System.Drawing.Point(498, 37);
+			this.txbCrearDirectorio.Location = new System.Drawing.Point(367, 37);
 			this.txbCrearDirectorio.Name = "txbCrearDirectorio";
 			this.txbCrearDirectorio.Size = new System.Drawing.Size(100, 20);
 			this.txbCrearDirectorio.TabIndex = 8;
 			// 
 			// txbCrearArchivo
 			// 
-			this.txbCrearArchivo.Location = new System.Drawing.Point(349, 80);
+			this.txbCrearArchivo.Location = new System.Drawing.Point(261, 80);
 			this.txbCrearArchivo.Name = "txbCrearArchivo";
 			this.txbCrearArchivo.Size = new System.Drawing.Size(100, 23);
 			this.txbCrearArchivo.TabIndex = 9;
@@ -167,39 +173,69 @@ namespace PrjCrearSolucion
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(349, 37);
+			this.textBox1.Location = new System.Drawing.Point(261, 37);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(100, 20);
 			this.textBox1.TabIndex = 10;
 			// 
 			// btnCopiarDirectorio
 			// 
-			this.btnCopiarDirectorio.Location = new System.Drawing.Point(632, 80);
+			this.btnCopiarDirectorio.Location = new System.Drawing.Point(473, 80);
 			this.btnCopiarDirectorio.Name = "btnCopiarDirectorio";
-			this.btnCopiarDirectorio.Size = new System.Drawing.Size(224, 23);
+			this.btnCopiarDirectorio.Size = new System.Drawing.Size(206, 23);
 			this.btnCopiarDirectorio.TabIndex = 12;
 			this.btnCopiarDirectorio.Text = "Copiar Directorio";
 			this.btnCopiarDirectorio.UseVisualStyleBackColor = true;
 			// 
 			// txbIniciaCopia
 			// 
-			this.txbIniciaCopia.Location = new System.Drawing.Point(632, 37);
+			this.txbIniciaCopia.Location = new System.Drawing.Point(473, 37);
 			this.txbIniciaCopia.Name = "txbIniciaCopia";
 			this.txbIniciaCopia.Size = new System.Drawing.Size(100, 20);
 			this.txbIniciaCopia.TabIndex = 13;
 			// 
 			// txbFinalizaCopia
 			// 
-			this.txbFinalizaCopia.Location = new System.Drawing.Point(776, 37);
+			this.txbFinalizaCopia.Location = new System.Drawing.Point(579, 37);
 			this.txbFinalizaCopia.Name = "txbFinalizaCopia";
 			this.txbFinalizaCopia.Size = new System.Drawing.Size(100, 20);
 			this.txbFinalizaCopia.TabIndex = 15;
+			// 
+			// btnStreamW
+			// 
+			this.btnStreamW.Location = new System.Drawing.Point(691, 80);
+			this.btnStreamW.Name = "btnStreamW";
+			this.btnStreamW.Size = new System.Drawing.Size(100, 23);
+			this.btnStreamW.TabIndex = 16;
+			this.btnStreamW.Text = "StreamW";
+			this.btnStreamW.UseVisualStyleBackColor = true;
+			this.btnStreamW.Click += new System.EventHandler(this.BtnStreamWClick);
+			// 
+			// txbStreamW
+			// 
+			this.txbStreamW.Location = new System.Drawing.Point(691, 37);
+			this.txbStreamW.Name = "txbStreamW";
+			this.txbStreamW.Size = new System.Drawing.Size(100, 20);
+			this.txbStreamW.TabIndex = 17;
+			// 
+			// btnStreamR
+			// 
+			this.btnStreamR.Location = new System.Drawing.Point(811, 80);
+			this.btnStreamR.Name = "btnStreamR";
+			this.btnStreamR.Size = new System.Drawing.Size(82, 23);
+			this.btnStreamR.TabIndex = 18;
+			this.btnStreamR.Text = "StreamR";
+			this.btnStreamR.UseVisualStyleBackColor = true;
+			this.btnStreamR.Click += new System.EventHandler(this.BtnStreamRClick);
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(913, 396);
+			this.ClientSize = new System.Drawing.Size(943, 396);
+			this.Controls.Add(this.btnStreamR);
+			this.Controls.Add(this.txbStreamW);
+			this.Controls.Add(this.btnStreamW);
 			this.Controls.Add(this.txbFinalizaCopia);
 			this.Controls.Add(this.txbIniciaCopia);
 			this.Controls.Add(this.btnCopiarDirectorio);
@@ -215,6 +251,7 @@ namespace PrjCrearSolucion
 			this.Controls.Add(this.dgvLogs);
 			this.Name = "MainForm";
 			this.Text = "PrjCrearSolucion";
+			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.Click += new System.EventHandler(this.BtnAnadirLogClick);
 			((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).EndInit();
 			this.ResumeLayout(false);
